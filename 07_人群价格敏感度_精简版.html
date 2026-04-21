@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第 7 章 · 不同人群的价格敏感度</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+
+:root {
+  --fg: #1d1d1f;
+  --fg-soft: #545458;
+  --bg: #fafafa;
+  --bg-card: #ffffff;
+  --bg-soft: #f3f3f3;
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
+  --quote-bar: #cbd5e1;
+  --table-border: #e5e7eb;
+  --table-stripe: #f9fafb;
+  --table-hover: #eff6ff;
+  --code-bg: #f5f5f7;
+  --highlight-bg: #fffbeb;
+  --highlight-border: #f59e0b;
+  --shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-size: 16px;
+  line-height: 1.78;
+  color: var(--fg);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+.content {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 56px 40px 120px;
+  background: var(--bg-card);
+  box-shadow: var(--shadow);
+}
+.page-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  line-height: 1.35;
+}
+.page-subtitle {
+  font-size: 15px;
+  color: var(--fg-soft);
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--fg);
+}
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 48px 0 14px;
+  line-height: 1.4;
+}
+h3 {
+  font-size: 17px;
+  font-weight: 600;
+  margin: 30px 0 10px;
+  line-height: 1.45;
+}
+p { margin: 14px 0; }
+strong { font-weight: 700; color: var(--fg); }
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+  word-break: break-word;
+}
+a:hover { border-bottom-color: var(--accent); }
+ul, ol { padding-left: 28px; margin: 14px 0; }
+li { margin: 6px 0; }
+blockquote {
+  margin: 18px 0;
+  padding: 12px 18px 12px 22px;
+  border-left: 3px solid var(--quote-bar);
+  background: var(--bg-soft);
+  border-radius: 0 6px 6px 0;
+  color: var(--fg-soft);
+  font-size: 15px;
+}
+blockquote p { margin: 6px 0; line-height: 1.7; }
+blockquote strong { color: var(--fg); }
+.table-wrap {
+  margin: 20px 0;
+  overflow-x: auto;
+  border: 1px solid var(--table-border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.55;
+}
+th, td {
+  padding: 10px 14px;
+  text-align: left;
+  border-bottom: 1px solid var(--table-border);
+  vertical-align: top;
+}
+th {
+  background: #f1f5f9;
+  font-weight: 600;
+  border-bottom: 2px solid #94a3b8;
+}
+tr:nth-child(even) td { background: var(--table-stripe); }
+tr:hover td { background: var(--table-hover); }
+code {
+  font-family: 'JetBrains Mono', 'Menlo', monospace;
+  font-size: 13.5px;
+  background: var(--code-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+  color: #be185d;
+}
+pre {
+  margin: 18px 0;
+  padding: 16px 20px;
+  background: var(--code-bg);
+  border-radius: 8px;
+  overflow-x: auto;
+  border: 1px solid var(--table-border);
+}
+pre code { background: transparent; padding: 0; color: var(--fg); font-size: 13px; white-space: pre; }
+hr { border: none; height: 1px; background: var(--table-border); margin: 36px 0; }
+.highlight {
+  margin: 24px 0;
+  padding: 18px 24px;
+  background: var(--highlight-bg);
+  border-left: 4px solid var(--highlight-border);
+  border-radius: 0 8px 8px 0;
+}
+.highlight h3 { margin-top: 0; }
+.highlight p { margin: 8px 0; }
+.key-points {
+  margin: 24px 0;
+  padding: 20px 24px;
+  background: var(--accent-soft);
+  border-radius: 10px;
+}
+.key-points h3 { margin-top: 0; color: #1e3a8a; }
+.key-points ol { margin: 10px 0 0; padding-left: 24px; }
+.key-points li { margin: 10px 0; line-height: 1.7; }
+@media (max-width: 900px) {
+  .content { padding: 24px 18px 80px; box-shadow: none; }
+  .page-title { font-size: 24px; }
+  h2 { font-size: 19px; margin-top: 36px; }
+  h3 { font-size: 16px; }
+  body { font-size: 15px; }
+  table { font-size: 13px; }
+  th, td { padding: 8px 10px; }
+}
+@media print {
+  .content { box-shadow: none; padding: 0; }
+  a { color: var(--fg); text-decoration: underline; }
+}
+
+</style>
+</head>
+<body>
+<main class="content">
+
+<h1 class="page-title">第 7 章 · 不同人群的价格敏感度</h1>
+<div class="page-subtitle">小红书智能戒指定价参考报告</div>
+
+<div class="key-points">
+<h3>一句话总结</h3>
+<p>小红书智能戒指评论人群分 <strong>8 类</strong>,<strong>3 类是国产品牌的主战场</strong>:路人围观型(占 71%,最大战场)+ 入坑新手(定价接受度最高)+ 健康发烧友(愿付高端溢价)。<strong>撸羊毛达人(7%)不是优先级</strong>,但可以用本土节点(双 11 / 618 / 国补 / 二手转卖)局部吸引;智商税派和玩梗看戏型不是目标客户。</p>
+</div>
+
+<h2>7.1 8 类人群分布 + 核心画像</h2>
+
+<div class="table-wrap"><table>
+<tr><th>人群</th><th>占评论池</th><th>画像</th><th>对国产品牌</th></tr>
+<tr><td><strong>路人围观型</strong></td><td><strong>71%</strong></td><td>吃瓜路人,被博主种草驱动购买</td><td>★★★★★ 主战场</td></tr>
+<tr><td>撸羊毛达人</td><td>7%</td><td>70% 省钱手段是 Amex,心智被北美 hack 生态主导</td><td>★★ 非优先级,可用双 11 / 国补局部吸引</td></tr>
+<tr><td><strong>入坑新手</strong></td><td>6%</td><td>第一次买,没有价格锚,接受度最高</td><td>★★★★ 重点争取</td></tr>
+<tr><td><strong>健康发烧友</strong></td><td>6%</td><td>能接受 ¥2000 硬件一次性付,拒绝月费</td><td>★★★★ 终身买断版的核心客群</td></tr>
+<tr><td>玩梗看戏型</td><td>5%</td><td>在 viral 帖下玩梗,不构成购买意愿</td><td>★★ 借势不投放</td></tr>
+<tr><td>已购老用户</td><td>3%</td><td>情绪两极,强吹或强吐槽</td><td>★★★ 转化为口碑传播源</td></tr>
+<tr><td>答疑选购顾问</td><td>1.4%</td><td>给新人做选购建议,理性派</td><td>★★★★ KOL 培育重点(影响力 ≫ 人数)</td></tr>
+<tr><td>智商税派</td><td>0.6%</td><td>100% 认为"不值",任何价格说服不了</td><td>★ 舆情管理,不争取</td></tr>
+</table></div>
+
+<h2>7.2 三个关键洞察(会直接影响定价决策)</h2>
+
+<h3>洞察一 · 健康发烧友是"一次性高价"的核心客群</h3>
+
+<p>健康发烧友在"值不值"上最两极 —— <strong>48% 觉得值,26% 觉得不值</strong>(在所有人群中对"值"的比例最高);同时他们最高频的吐槽是「我能接受贵,但是我不能接受月费」(👍12)。</p>
+
+<p><strong>含义</strong>:他们能接受 ¥1500-2200 的硬件价,但拒绝月费 —— <strong>¥1999 终身买断版是专门为这群人设计的必杀技</strong>。</p>
+
+<h3>洞察二 · 入坑新手没有价格锚,是国产最容易攻下的人群</h3>
+
+<p>入坑新手没用过 Oura,没有 Amex,不懂北美 hack 生态。他们的典型提问是「现在 249,怎么样还能更便宜?」<strong>他们眼中的国产 ¥1499 / ¥1799 没有比较对象</strong> —— 这是从 0 到 1 建立国产品牌心智的最佳切入人群。</p>
+
+<p><strong>含义</strong>:国产品牌在小红书的<strong>主力内容战场应该瞄准入坑新手</strong>(第一次买戒指的人),而不是去跟 Oura 的已购用户抢份额。</p>
+
+<h3>洞察三 · 撸羊毛达人是非优先级人群,但不是零机会</h3>
+
+<p>撸羊毛达人群体有两个特征:70% 的省钱行为围绕 Amex 200 Credit;但他们的购买立场里 <strong>41% 还在"评估中"</strong>,并非全部锁定 Oura —— 说明这群人本质是 <strong>"哪里有 deal 去哪里"</strong>,不是"忠于 Oura"。典型评论「我们来想买的,但是我没有 amex 白金卡,减不了 200。瞬间就觉得不香了,不买了!」展示的是 <strong>Amex 失效时流失</strong> 的行为,不是 <strong>只认 Oura</strong> 的品牌忠诚。</p>
+
+<p><strong>所以结论需要分层</strong>:</p>
+<ul>
+<li><strong>日常博主种草 / 品牌广告 对他们无效</strong> —— 不要把主力内容预算投在这群人身上。</li>
+<li><strong>但本土 deal 窗口对他们有效</strong> —— 双 11 / 618 / 国补 15% / 年度大促 / 二手戒指转卖等场景,能吸引部分"无 Amex 可撸"的中国撸羊毛达人转向国产选项。</li>
+<li><strong>这层人群的评估需要观察信号</strong> —— 样本量相对小,以上判断来自评论层的行为模式和立场分布,后续建议跟踪双 11 / 618 期间国产戒指在这群人评论里的出现情况。</li>
+</ul>
+
+<p><strong>行动建议</strong>:把撸羊毛达人从"主力投放目标"降级为"大促期间的机会目标",主力内容预算仍然聚焦路人围观型 + 入坑新手 + 健康发烧友。</p>
+
+<h2>7.3 本章核心结论</h2>
+
+<div class="key-points">
+<ol>
+<li><strong>71% 的评论来自路人围观型</strong> —— 这是主战场,不是专业人群。<strong>博主种草 + 渠道光环 + 简单价格信号</strong> 的组合拳比任何"深度测评"都有效。</li>
+<li><strong>健康发烧友(6%)是 ¥1999 终身买断版的完美目标客群</strong> —— 他们愿付一次性高价但拒绝月费,国产品牌的「硬件 + 终身会员」打包模式专门为他们设计。</li>
+<li><strong>撸羊毛达人(7%)是非优先级、不是零机会</strong> —— 日常博主种草对他们无效,但本土大促节点(双 11 / 618 / 国补)可以局部吸引。<strong>主力内容预算聚焦路人围观型 + 入坑新手 + 健康发烧友 + 答疑顾问这四类(合计覆盖 85% 有效人群),撸羊毛达人留给大促期的促销动作承接即可</strong>。</li>
+</ol>
+</div>
+
+</main>
+</body>
+</html>
