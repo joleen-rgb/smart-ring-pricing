@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>7 · 不同人群的价格敏感度 — 小红书智能戒指定价参考报告</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="page">
+
+  <nav class="topnav">
+    <a href="index.html">‹ 目录</a>
+    <span class="progress">第 7 章 / 共 8 章</span>
+  </nav>
+
+  <header class="ch-head">
+    <div class="num">7</div>
+    <div class="title">
+      <h1>不同人群的价格敏感度</h1>
+      <div class="kicker">8 类用户人群切片 × 多维度对照</div>
+    </div>
+  </header>
+
+  <p class="ch-intro">按 8 类用户人群切片，每一类都由评论原文 + 所在帖子的背景（折扣帖 / 评测帖 / 对比帖）+ 用户价格立场综合判断。</p>
+
+  <button class="expand-all" id="expandAll">展开全部小节</button>
+
+  <!-- 7.1 -->
+  <details class="sub">
+    <summary>
+      <div class="sub-num">7.1</div>
+      <div class="sub-title">
+        8 类用户人群概览
+        <span class="hint">路人围观型 / 撸羊毛达人 / 入坑新手 / 健康发烧友……</span>
+      </div>
+      <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M7 5l6 5-6 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="sub-body">
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>中文标签</th><th>一句话定义</th></tr></thead>
+          <tbody>
+            <tr><td><strong>路人围观型</strong></td><td>路人吃瓜，简短反应，不深入</td></tr>
+            <tr><td><strong>撸羊毛达人</strong></td><td>高度关注价格 / 折扣机制</td></tr>
+            <tr><td><strong>入坑新手</strong></td><td>第一次接触，在评估买不买</td></tr>
+            <tr><td><strong>健康发烧友</strong><br><small>（底层值：认真测评型买家）</small></td><td>技术控，讲规格、做对比</td></tr>
+            <tr><td><strong>玩梗看戏型</strong></td><td>玩梗 / 闲聊，不构成购买信号</td></tr>
+            <tr><td><strong>已购老用户</strong></td><td>已经在用，分享真实体验</td></tr>
+            <tr><td><strong>答疑选购顾问</strong></td><td>给别人做选购建议</td></tr>
+            <tr><td><strong>智商税派</strong></td><td>怀疑产品价值或品牌真伪</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <!-- 7.2 -->
+  <details class="sub" open>
+    <summary>
+      <div class="sub-num">7.2</div>
+      <div class="sub-title">
+        8 类人群的占比 + 一句话画像
+        <span class="hint">路人围观型 71% 是绝对大多数</span>
+      </div>
+      <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M7 5l6 5-6 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="sub-body">
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>人群</th><th>占评论池</th><th>一句话画像</th></tr></thead>
+          <tbody>
+            <tr><td><strong>路人围观型</strong></td><td class="num"><span class="pct-bar" style="width:142px;"></span><strong>71%</strong></td><td>路人吃瓜，价格敏感度中等，易被博主带节奏</td></tr>
+            <tr><td>撸羊毛达人</td><td class="num"><span class="pct-bar" style="width:14px;"></span>7%</td><td>"撸羊毛"专业户，只为 hack 价而来</td></tr>
+            <tr><td>入坑新手</td><td class="num"><span class="pct-bar" style="width:12px;"></span>6%</td><td>第一次接触智能戒指，问"贵吗""值吗"</td></tr>
+            <tr><td>健康发烧友</td><td class="num"><span class="pct-bar" style="width:12px;"></span>6%</td><td>已是健康可穿戴重度用户，愿付溢价</td></tr>
+            <tr><td>玩梗看戏型</td><td class="num"><span class="pct-bar" style="width:10px;"></span>5%</td><td>玩梗 / 看热闹，不构成购买意愿</td></tr>
+            <tr><td>已购老用户</td><td class="num"><span class="pct-bar" style="width:6px;"></span>3%</td><td>已购用户，情绪两极（强吹 or 强吐槽）</td></tr>
+            <tr><td>答疑选购顾问</td><td class="num"><span class="pct-bar" style="width:3px;"></span>1.4%</td><td>老用户给新人做选购建议，理性派</td></tr>
+            <tr><td>智商税派</td><td class="num"><span class="pct-bar" style="width:2px;"></span>0.6%</td><td>"智商税"派，对所有定价都质疑</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <!-- 7.3 -->
+  <details class="sub">
+    <summary>
+      <div class="sub-num">7.3</div>
+      <div class="sub-title">
+        人群 × 多维度对照表
+        <span class="hint">只看真正讨论价格的子集 · 4 张交叉表</span>
+      </div>
+      <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M7 5l6 5-6 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="sub-body">
+
+      <div class="subtopic">
+        <h5><span class="num">7.3.1</span>人群 × 定价情绪</h5>
+        <div class="table-wrap">
+          <table class="data">
+            <thead><tr><th>人群</th><th>觉得合理</th><th>觉得便宜</th><th>觉得太贵</th><th>贵但值</th></tr></thead>
+            <tbody>
+              <tr><td>路人围观型</td><td class="num">86%</td><td class="num">9%</td><td class="num">4%</td><td class="num">1%</td></tr>
+              <tr><td>撸羊毛达人</td><td class="num">80%</td><td class="num">17%</td><td class="num">2%</td><td class="num">—</td></tr>
+              <tr><td>健康发烧友</td><td class="num">73%</td><td class="num">4%</td><td class="num">16%</td><td class="num">7%</td></tr>
+              <tr><td>入坑新手</td><td class="num">79%</td><td class="num">11%</td><td class="num">7%</td><td class="num">4%</td></tr>
+              <tr><td>已购老用户</td><td class="num">86%</td><td class="num">—</td><td class="num">14%</td><td class="num">—</td></tr>
+              <tr><td><strong>智商税派</strong></td><td class="num">8%</td><td class="num">—</td><td class="num"><strong>83%</strong></td><td class="num">—</td></tr>
+              <tr><td>答疑选购顾问</td><td class="num"><strong>100%</strong></td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subtopic">
+        <h5><span class="num">7.3.2</span>人群 × 值不值</h5>
+        <div class="table-wrap">
+          <table class="data">
+            <thead><tr><th>人群</th><th>不值</th><th>值</th><th>在犹豫</th></tr></thead>
+            <tbody>
+              <tr><td>路人围观型</td><td class="num">32%</td><td class="num">43%</td><td class="num">25%</td></tr>
+              <tr><td>健康发烧友</td><td class="num">26%</td><td class="num">48%</td><td class="num">26%</td></tr>
+              <tr><td><strong>智商税派</strong></td><td class="num"><strong>100%</strong></td><td class="num">—</td><td class="num">—</td></tr>
+              <tr><td>已购老用户</td><td class="num">43%</td><td class="num">29%</td><td class="num">29%</td></tr>
+              <tr><td>撸羊毛达人</td><td class="num">50%</td><td class="num">17%</td><td class="num">33%</td></tr>
+              <tr><td>入坑新手</td><td class="num">17%</td><td class="num">67%</td><td class="num">17%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subtopic">
+        <h5><span class="num">7.3.3</span>人群 × 主要省钱手段</h5>
+        <div class="table-wrap">
+          <table class="data">
+            <thead><tr><th>人群</th><th>Amex</th><th>黑五</th><th>优惠券</th><th>二手</th><th>推荐码</th></tr></thead>
+            <tbody>
+              <tr><td><strong>撸羊毛达人</strong></td><td class="num"><strong>70%</strong></td><td class="num">21%</td><td class="num">1%</td><td class="num">5%</td><td class="num">3%</td></tr>
+              <tr><td>路人围观型</td><td class="num">38%</td><td class="num">46%</td><td class="num">14%</td><td class="num">1%</td><td class="num">1%</td></tr>
+              <tr><td>健康发烧友</td><td class="num">15%</td><td class="num">49%</td><td class="num">33%</td><td class="num">—</td><td class="num">3%</td></tr>
+              <tr><td>已购老用户</td><td class="num">35%</td><td class="num">59%</td><td class="num">6%</td><td class="num">—</td><td class="num">—</td></tr>
+              <tr><td>玩梗看戏型</td><td class="num">73%</td><td class="num">7%</td><td class="num">20%</td><td class="num">—</td><td class="num">—</td></tr>
+              <tr><td>智商税派</td><td class="num">33%</td><td class="num">67%</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="subtopic">
+        <h5><span class="num">7.3.4</span>人群 × 购买立场</h5>
+        <div class="table-wrap">
+          <table class="data">
+            <thead><tr><th>人群</th><th>已购</th><th>决定不买</th><th>评估中</th><th>即将买</th><th>用过前代</th></tr></thead>
+            <tbody>
+              <tr><td>路人围观型</td><td class="num">43%</td><td class="num">22%</td><td class="num">26%</td><td class="num">3%</td><td class="num">5%</td></tr>
+              <tr><td>已购老用户</td><td class="num"><strong>100%</strong></td><td class="num">—</td><td class="num">—</td><td class="num">—</td><td class="num">—</td></tr>
+              <tr><td>健康发烧友</td><td class="num">43%</td><td class="num">18%</td><td class="num">20%</td><td class="num">10%</td><td class="num">10%</td></tr>
+              <tr><td>撸羊毛达人</td><td class="num">50%</td><td class="num">9%</td><td class="num">41%</td><td class="num">—</td><td class="num">—</td></tr>
+              <tr><td>入坑新手</td><td class="num">15%</td><td class="num">23%</td><td class="num">8%</td><td class="num">15%</td><td class="num"><strong>38%</strong></td></tr>
+              <tr><td>智商税派</td><td class="num">50%</td><td class="num">38%</td><td class="num">13%</td><td class="num">—</td><td class="num">—</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </details>
+
+  <!-- 7.4 -->
+  <details class="sub">
+    <summary>
+      <div class="sub-num">7.4</div>
+      <div class="sub-title">
+        8 大人群定价行为画像 + 直接原话
+      </div>
+      <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M7 5l6 5-6 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="sub-body">
+
+      <div class="subtopic">
+        <h5><span class="num">7.4.1</span>路人围观型（占评论池 71%）——「价格敏感度中位，沉默大多数」</h5>
+        <p><strong>画像</strong>：吃瓜路人，价格情绪占 86% 觉得价格合理。买不买大多取决于博主能不能种草成功。<strong>最容易被 hack 价营销激活</strong>（46% 黑五 + 38% Amex）。</p>
+
+        <div class="quote">
+          <div class="text">试过了　叠加不了　就下单了（优惠没生效但还是买了）</div>
+          <div class="cite">
+            <a href="https://www.xiaohongshu.com/explore/691f2c0d000000001e00edd4?xsec_token=YBf9GuzW8zd0pDElSDY9QN7nANSGokaxX5x4RzGfs_KLQ=" target="_blank" rel="noopener">《黑五预告｜Oura 戒指打折啦》评论 #6</a>
+            <span class="meta-sep">·</span><span class="likes">👍 5</span>
+          </div>
+        </div>
+
+        <div class="quote">
+          <div class="text">ring corn 吧，起码不用订阅（直接给同行 RingConn 引流）</div>
+          <div class="cite">
+            <a href="https://www.xiaohongshu.com/explore/692650ca000000001e017e2f?xsec_token=YBgXqAJXklnkQ4HyTRtKi-ec3KMTK9GceDCnL1975X5ZE=" target="_blank" rel="noopener">《一人一句 劝退我》评论 #102</a>
+            <span class="meta-sep">·</span><span class="likes">👍 3</span>
+          </div>
+        </div>
+
+        <div class="insight">
+          <div class="label">对国产品牌的含义</div>
+          <p>路人围观型是国产戒指的<strong>主战场——占评论 71%，价格判断弹性最大</strong>。需要"博主种草 + 渠道光环 + 简单价格信号（无月费）"组合拳。</p>
+        </div>
+      </div>
+
+      <div class="subtopic">
+        <h5><span class="num">7.4.2</span>撸羊毛达人（占评论池 7%）——「Amex hack 工程师」</h5>
+        <p><strong>画像</strong>：<strong>70% 的省钱手段提及是 Amex</strong>——高度专业化、围绕 Amex 200 美元 credit 套利的小群体。41% 还在评估中——即使撸羊毛达人也会在最优 deal 出现前观望。</p>
+
+        <div class="quote">
+          <div class="text">我们来想买的，但是我没有 amex 白金卡，减不了 200。瞬间就觉得不香了，不买了!</div>
+          <div class="cite">
+            <a href="https://www.xiaohongshu.com/explore/691ff2e0000000001e008041?xsec_token=YBjdBGWXKZ3sOt_hUYyjo9_ISU_3QViabI853JlWOVCu4=" target="_blank" rel="noopener">《Oura ring 黑五减了一百刀》评论 #8</a>
+            <span class="meta-sep">·</span><span class="likes">👍 7</span>
+          </div>
+        </div>
+
+        <div class="quote">
+          <div class="text">Amex 入股 Oura 套住用户每月的服务费，长期来看想薅羊毛的人其实是被薅了[捂脸R]</div>
+          <div class="cite">
+            <a href="https://www.xiaohongshu.com/explore/692a13c8000000001b0278ce?xsec_token=YB5WmdlGCw5y0B3rIZIioBueg2Cu7_nv25IKBtpoQrxvg=" target="_blank" rel="noopener">《楼里全是买 Oura Ring 的》评论 #1</a>
+            <span class="meta-sep">·</span><span class="likes">👍 53</span>
+          </div>
+        </div>
+
+        <div class="insight">
+          <div class="label">对国产品牌的含义</div>
+          <p><strong>撸羊毛达人几乎不可争取</strong>——他们的"撸羊毛"心智已经被 Amex 完全绑定。国产品牌做这群人营销 ROI 极低。<strong>忽略他们，聚焦路人围观型</strong>。</p>
+        </div>
+      </div>
+
+      <div class="subtopic">
+        <h5><span class="num">7.4.3</span>健康发烧友（占评论池 6%）——「健康数据控，愿付溢价」</h5>
+        <p><strong>画像</strong>：16% 觉得太贵，但同时 7% 觉得贵但值（在所有人群中最高）。<strong>两极化的小群体</strong>：对真好用的产品愿付溢价，对垃圾产品最毒舌。</p>
+
+        <div class="quote">
+          <div class="text">是我最近几年做过最值得电子产品投资，逢人就劝买。订阅一直出新功能，特别好。</div>
+          <div class="cite">
+            <a href="https://www.xiaohongshu.com/explore/692650ca000000001e017e2f?xsec_token=YBgXqAJXklnkQ4HyTRtKi-ec3KMTK9GceDCnL1975X5ZE=" target="_blank" rel="noopener">《一人一句 劝退我》评论 #61</a>
+          </div>
+        </div>
+
+        <div class="quote pin">
+          <div class="pin-tag">重点原话</div>
+          <div class="text">我能接受贵，但是我不能接受月费[笑哭R]就像我咬咬牙买了个辣妈咖啡机，我能接受几万的单价，但是我不能接受一万+500 的月费</div>
+          <div class="cite">
+            <a href="https://www.xiaohongshu.com/explore/691ff2e0000000001e008041?xsec_token=YBjdBGWXKZ3sOt_hUYyjo9_ISU_3QViabI853JlWOVCu4=" target="_blank" rel="noopener">《Oura ring 黑五减了一百刀》评论 #27</a>
+            <span class="meta-sep">·</span><span class="likes">👍 12</span>
+          </div>
+          <p style="font-size:12.5px;color:var(--ink-mute);margin-top:6px;">健康发烧友群体的核心定价心理：对一次性高价不抗拒，对持续月费极度敏感。</p>
+        </div>
+
+        <div class="insight">
+          <div class="label">对国产品牌的含义</div>
+          <p><strong>健康发烧友是品牌真粉的孵化群，值得重点经营</strong>——他们能接受 ¥1500–2200 的硬件价，但拒绝月费。首发提供"终身会员买断版"对这群人是必杀技。</p>
+        </div>
+      </div>
+
+      <div class="subtopic">
+        <h5><span class="num">7.4.4</span>入坑新手（占评论池 6%）——「第一次想买的人，问"贵吗"」</h5>
+        <p><strong>画像</strong>：38% 立场是"用过前代"——这个数字看着反常（新人怎么有"前一代"?），其实是标签把"用过别家智能手环 / 手表"也归到这里。<strong>购买意愿高但价格敏感</strong>。</p>
+
+        <div class="quote">
+          <div class="text">卖给上海人　你不是用 amex 买的[嘻嘻R]（预设上海人会用 Amex）</div>
+          <div class="cite">
+            <a href="https://www.xiaohongshu.com/explore/69e111380000000023026d5f?xsec_token=YBd9tRefKRVpkCOf2Y1UOeHDC318LokhJdxu25QJNvd_w=" target="_blank" rel="noopener">《苹果 AppleRing 要来了!》评论 #30</a>
+            <span class="meta-sep">·</span><span class="likes">👍 5</span>
+          </div>
+        </div>
+
+        <div class="quote">
+          <div class="text">现在 249，怎么样还能更便宜?</div>
+          <div class="cite">
+            <a href="https://www.xiaohongshu.com/explore/691f72c2000000001e02cd6c?xsec_token=YBf9GuzW8zd0pDElSDY9QN7rMLdpYEUAhaGMqfIe8oDQ4=" target="_blank" rel="noopener">《Oura Ring 的 subscription Amex 能报销吗》评论 #14</a>
+            <span class="meta-sep">·</span><span class="likes">👍 2</span>
+          </div>
+        </div>
+
+        <div class="insight">
+          <div class="label">对国产品牌的含义</div>
+          <p>入坑新手是国产品牌从 0 到 1 的关键人群。他们没有 Amex，没用过 Oura，只想知道"这玩意几百块能不能买"——<strong>国产 ¥1499 / 1799 在他们眼里没有比较锚，接受度最高</strong>。</p>
+        </div>
+      </div>
+
+      <div class="subtopic">
+        <h5><span class="num">7.4.5</span>已购老用户（占评论池 3%）——「已购用户，情绪极端」</h5>
+        <p><strong>画像</strong>：100% 已购，86% 觉得价格合理但 14% 觉得太贵。已购后两极反馈：要么真心觉得好，要么后悔到吐槽。</p>
+
+        <div class="quote">
+          <div class="text">俺有终身会员　所以觉得还挺好用[doge]</div>
+          <div class="cite">
+            <a href="https://www.xiaohongshu.com/explore/692650ca000000001e017e2f?xsec_token=YBgXqAJXklnkQ4HyTRtKi-ec3KMTK9GceDCnL1975X5ZE=" target="_blank" rel="noopener">《一人一句 劝退我》评论 #129</a>
+            <span class="meta-sep">·</span><span class="likes">👍 3</span>
+          </div>
+        </div>
+
+        <div class="insight">
+          <div class="label">对国产品牌的含义</div>
+          <p>已购老用户是<strong>品牌的复购 / 推荐源</strong>。提供高质量的售后服务能把已购用户转化为传播节点。</p>
+        </div>
+      </div>
+
+      <div class="subtopic">
+        <h5><span class="num">7.4.6</span>智商税派（占评论池 0.6%）——「100% 不值，定价无关」</h5>
+        <p><strong>画像</strong>：100% 价值判断 = 不值。<strong>任何价格都说服不了他们</strong>。</p>
+
+        <div class="quote">
+          <div class="text">硅谷有很多骗人的小玩意，性价比极低，但是就是会营销，所谓的恢复比例也是一个算法。戴手腕上能记录的数据极其有限，忽悠搞定这些明星的经纪人就好了</div>
+          <div class="cite">
+            <a href="https://www.xiaohongshu.com/explore/6961f483000000001a02a377?xsec_token=YB2mSuoXgn2kD1Kz_-qJTCBZkH34q2fZ8DSmXTy2MwjwY=" target="_blank" rel="noopener">《黑带子》评论 #66</a>
+            <span class="meta-sep">·</span><span class="likes">👍 2</span>
+          </div>
+        </div>
+
+        <div class="insight">
+          <div class="label">对国产品牌的含义</div>
+          <p>忽略智商税派，他们不是目标客户。但要警惕智商税派在评论区的负面信号传播——这群人评论虽少，经常出现在 deal 帖最显眼位置（因为质疑帖容易获赞）。</p>
+        </div>
+      </div>
+
+      <div class="subtopic">
+        <h5><span class="num">7.4.7</span>答疑选购顾问（占评论池 1.4%）——「理性派，100% 觉得价格合理」</h5>
+        <p><strong>画像</strong>：给新人做选购建议的"中间人"角色，100% 觉得价格合理——不带情绪地给出对比建议。</p>
+
+        <div class="quote">
+          <div class="text">289 是 gen2air，429 的是 gen2，我记得 air 没办法检测睡眠呼吸暂停，还有材质不一样……air 也没有 subscription，应用上的功能都能用</div>
+          <div class="cite">
+            <a href="https://www.xiaohongshu.com/explore/68f801410000000203024478?xsec_token=YB3VyobedZHVySUiKfaQETR2AWKVucW2Lir1QPpWcyEd0=" target="_blank" rel="noopener">《🇨🇦试试 Ringconn Gen 2 Air》评论 #40</a>
+            <span class="meta-sep">·</span><span class="likes">👍 2</span>
+          </div>
+        </div>
+
+        <div class="insight">
+          <div class="label">对国产品牌的含义</div>
+          <p>答疑选购顾问数量虽少（60 人），但每个顾问的"建议"被入坑新手 / 路人围观型直接采纳。<strong>国产品牌应该有意培养这批意见领袖</strong>——给他们试用、给他们专业资料、给他们清晰对比表。</p>
+        </div>
+      </div>
+
+      <div class="subtopic">
+        <h5><span class="num">7.4.8</span>玩梗看戏型（占评论池 5%）——「不构成购买信号，但提供舆情扩散」</h5>
+        <p><strong>画像</strong>：评论占 5% 但几乎不涉及具体购买行为。多在现象级帖底下做梗回复 / 表情包，扩散原帖热度但不影响销售。</p>
+
+        <div class="insight">
+          <div class="label">对国产品牌的含义</div>
+          <p>不投放，但要会借势——国产品牌如果能造出一条引发玩梗看戏型大量回复的现象级帖（类似"楼里全是买 Oura Ring 的"那种邻里风），实际转化效果会远超普通种草帖。</p>
+        </div>
+      </div>
+
+    </div>
+  </details>
+
+  <!-- 7.5 -->
+  <details class="sub" open>
+    <summary>
+      <div class="sub-num">7.5</div>
+      <div class="sub-title">
+        「人群目标优先级」总结
+        <span class="hint">8 类人群按可争取度排序</span>
+      </div>
+      <svg class="chev" viewBox="0 0 20 20" fill="none"><path d="M7 5l6 5-6 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </summary>
+    <div class="sub-body">
+      <div class="table-wrap">
+        <table class="data">
+          <thead><tr><th>优先级</th><th>目标人群</th><th>占比</th><th>行动建议</th></tr></thead>
+          <tbody>
+            <tr><td class="num">★★★★★</td><td><strong>路人围观型</strong></td><td class="num">71%</td><td>重投博主种草 + 山姆 / 京东渠道 + 简单价格信号</td></tr>
+            <tr><td class="num">★★★★</td><td><strong>入坑新手</strong></td><td class="num">6%</td><td>重投"价格 + 卖点"双标语；¥1499–1799 区间最佳</td></tr>
+            <tr><td class="num">★★★★</td><td><strong>健康发烧友</strong></td><td class="num">6%</td><td>出"终身会员买断版" + 深度数据展示</td></tr>
+            <tr><td class="num">★★★</td><td>已购老用户</td><td class="num">3%</td><td>售后服务 + 推荐码体系</td></tr>
+            <tr><td class="num">★★</td><td>答疑选购顾问</td><td class="num">1.4%</td><td>KOL 培育 + 试用 + 对比物料</td></tr>
+            <tr><td class="num">★★</td><td>玩梗看戏型</td><td class="num">5%</td><td>制造现象级邻里风帖，借玩梗扩散</td></tr>
+            <tr><td class="num">★</td><td>撸羊毛达人</td><td class="num">7%</td><td>不主投（已绑 Amex，争取 ROI 极低）</td></tr>
+            <tr><td class="num">★</td><td>智商税派</td><td class="num">0.6%</td><td>仅做"避免负面爆点"的舆情管理</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </details>
+
+  <nav class="pager">
+    <a class="prev" href="ch-6.html">
+      <span class="dir">‹ 上一章</span>
+      <span class="label">6 · Oura 订阅费模式</span>
+    </a>
+    <a class="next" href="ch-8.html">
+      <span class="dir">下一章 ›</span>
+      <span class="label">8 · 定价启示（至 8.1）</span>
+    </a>
+  </nav>
+
+  <div class="back-to-index"><a href="index.html">← 返回目录</a></div>
+
+</div>
+
+<script>
+  const btn = document.getElementById('expandAll');
+  const allDetails = document.querySelectorAll('details.sub');
+  function sync() {
+    const allOpen = [...allDetails].every(d => d.open);
+    btn.textContent = allOpen ? '收起全部小节' : '展开全部小节';
+  }
+  btn.addEventListener('click', () => {
+    const allOpen = [...allDetails].every(d => d.open);
+    allDetails.forEach(d => d.open = !allOpen);
+    sync();
+  });
+  allDetails.forEach(d => d.addEventListener('toggle', sync));
+  sync();
+</script>
+</body>
+</html>
